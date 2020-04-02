@@ -15,13 +15,16 @@ class CourseSession(models.Model):
     aparat_video = models.TextField(null=True)
 
 class CourseSessionExercise(models.Model):
-        coursesession = models.ForeignKey(CourseSession, on_delete=models.CASCADE, null=True)
+    coursesession = models.ForeignKey(CourseSession, on_delete=models.CASCADE, null=True)
     title = models.CharField(max_length=100, null=True)
     description = models.TextField(null=True)
     attachment_files = GenericRelation('AttachmentFiles')
 
 class AttachmentFiles(models.Model):
-    file = models.FileField(upload_to='aaaa')
+    file = models.FileField(upload_to='attach-files/%y-%m-%d_%H:%M')
     content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
     object_id = models.PositiveIntegerField()
     content_object = GenericForeignKey()
+
+    def __str__(self):
+        return self.content_object.title
