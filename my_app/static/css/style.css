@@ -1,0 +1,143 @@
+/* CSS Document */
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('../fonts/Vazir.eot');
+    src: local('../fonts/Vazir'), url('../fonts/Vazir.woff') format('woff'), url('../fonts/Vazir.ttf') format('truetype');
+}
+body {
+    font-family: 'Vazir';
+    /* background: -webkit-linear-gradient(right, #3931af, #00c6ff); */
+}
+
+#sign-in{
+    margin-left: 20px;
+}
+.sign-style{
+    margin-right: 3px;
+}
+.user-style{
+    margin-right: 3px;
+}
+.image-headr{
+    width: 100%;
+    margin-top: 60px;
+    height: auto;  
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .img-header{
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .myheader {
+    display: block;
+  }
+
+#span-red{
+    color: rgba(253, 108, 40, 0.918);
+}
+.h2-h2{
+    text-align: center;
+    margin-top: 90px;
+}
+.h5-h5{
+    text-align: center;
+    margin-bottom: 70px;
+    color: gray;
+}
+.image-product{
+    width: 100%;
+}
+.text-product{
+    margin: 20px 20px;
+}
+.viewpoint{
+    background-color:darkslategray;
+    color: white;
+    text-align: center; 
+    margin: auto; 
+    line-height: 30px;
+    border:1px solid silver;
+}
+.aviewpoint{
+  color: white;
+}
+.heart-product{
+    background-color:slategray;
+    color: white;
+    text-align: center;
+    margin: auto; 
+    line-height: 30px;
+    border:1px solid silver;
+}
+.comment-product{
+    background-color:darkslategray;
+    color: white; 
+    text-align: center;
+    margin: auto;
+    line-height: 30px;
+    border:1px solid silver;
+}
+.product-hover:hover{
+    box-shadow: 5px 10px 18px #888888;
+}
+.row-aparat{
+    background-image: url(../images/pic6.jpg);
+    margin: 0px;    
+    padding-top:64px;
+    padding-bottom: 60px;
+    margin-top: 90px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-attachment: fixed;
+    
+
+}
+.span-aparat{
+   margin-right: 20px;
+   font-size: 20px;
+   color: white;
+   
+  
+}
+.btn-aparat{
+    float: left;
+    margin-left: 40px;
+}
+.footer{
+    background-color: darkslategray;
+    height: 300px;
+    color: floralwhite;
+    margin-top: 60px;
+    border-top: 2px solid dimgray;
+    margin-bottom: 0px;
+}
+.icon-telegram{
+    font-size: 40px;
+    margin-right: 20px;  
+}
+.icon-telegram:hover{  
+    color: dodgerblue;  
+}
+.icon-instagram{
+    font-size: 40px;
+    margin-right: 20px;  
+}
+.icon-instagram:hover{ 
+    color: crimson;  
+}
+.icon-aparat{
+    font-size: 40px;
+    margin-right: 20px;  
+}
+.icon-aparat:hover{
+    color: darkgoldenrod;  
+}
