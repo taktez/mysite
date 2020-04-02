@@ -6,14 +6,39 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>عنوان محصول :: دریافت شده از وب روبیک</title>
-		<link type="text/css" href="{% static 'css/fa-bootstrap.css' %}" rel="stylesheet" />
+        <link type="text/css" href="{% static 'css/fa-bootstrap.css' %}" rel="stylesheet" />
+        <style>
+            @font-face {
+                font-family: Parastoo;
+                src: url('{% static "font/Parastoo-FD-WOL.woff" %}');
+            }
+            @font-face{
+                font-family: Vazir-thin;
+                src: url('{% static "font/Vazir-Thin-FD-WOL.woff" %}') format('woff'),
+                 url('{% static "font/Vazir-Thin-FD-WOL.eot" %}') format('eot'),
+                 url('{% static "font/Vazir-Thin-FD-WOL.ttf" %}') format('ttf');
+                 
+            }
+            @font-face{
+                font-family: Vazir-medium;
+                src: url('{% static "font/Vazir-Medium-FD-WOL.woff" %}') format('woff'),
+                url('{% static "font/Vazir-Medium-FD-WOL.eot" %}') format('eot'),
+                url('{% static "font/Vazir-Medium-FD-WOL.ttf" %}') format('ttf');
+            }
+            @font-face{
+                font-family: Vazir-bold;
+                src: url('{% static "font/Vazir-Bold-FD-WOL.woff" %}') format('woff'),
+                url('{% static "font/Vazir-Bold-FD-WOL.eot" %}') format('eot'),
+                url('{% static "font/Vazir-Bold-FD-WOL.ttf" %}') format('ttf');
+            }
+        </style>
 		<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
 		<link type="text/css" href="{% static 'css/style.css' %}" rel="stylesheet" />
 		<link href="{% static 'css/jquery-ui.css' %}" rel="stylesheet">
 
 		
 	</head>
-	<body >
+	<body>
 	
 			<!--START header-->
 			<nav class="navbar navbar-default navbar-fixed-top">

@@ -1,13 +1,9 @@
 /* CSS Document */
 @charset "UTF-8";
 
-@font-face {
-    font-family: 'Vazir';
-    src: url('../fonts/Vazir.eot');
-    src: local('../fonts/Vazir'), url('../fonts/Vazir.woff') format('woff'), url('../fonts/Vazir.ttf') format('truetype');
-}
-body {
-    font-family: 'Vazir';
+
+body , div, li, p, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Vazir-medium';
     /* background: -webkit-linear-gradient(right, #3931af, #00c6ff); */
 }
 
