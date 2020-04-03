@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'sorl.thumbnail',
+    'social_django',
 
     'my_app',
 ]
@@ -51,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'my_project.urls'
@@ -66,6 +69,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                'social_django.context_processors.backends', 
+                'social_django.context_processors.login_redirect', 
             ],
         },
     },
@@ -126,3 +132,24 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = BASE_DIR + '/media/'
 
 MEDIA_URL =  '/media/'
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.open_id.OpenIdAuth',
+    'social_core.backends.google.GoogleOpenId',
+    'social_core.backends.google.GoogleOAuth',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+LOGIN_URL = 'auth/login/google-oauth2'
+
+LOGIN_REDIRECT_URL = 'my_app:index'
+LOGOUT_REDIRECT_URL = 'my_app:index'
+
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '235765693334-ofqji10fmvahkvblb3gk0i066nf19vgv.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'WqEeZoohGdOrUh0z7xoFPeFv'
+
+SOCIAL_AUTH_GITHUB_KEY = '8300a3c4488962a5c1f6'
+SOCIAL_AUTH_GITHUB_SECRET = '5bdc233fa2e5a75cfe303fd33b6d16af81827f64'
