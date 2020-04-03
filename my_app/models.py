@@ -4,15 +4,28 @@ from django.contrib.contenttypes.fields import GenericForeignKey
 from django.contrib.contenttypes.models import ContentType
 
 
+def course_image_path(instance, filename):
+    return instance.title
+
+
 class Course(models.Model):
+    image = models.ImageField(upload_to=course_image_path, null=True)
+    altt = models.CharField(max_length=100, null=True)
     title = models.CharField(max_length=100, null=True)
     description = models.TextField(null=True)
+
+    def __str__(self):
+        return self.title
 
 class CourseSession(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE, null=True)
     title = models.CharField(max_length=100, null=True)
     description = models.TextField(null=True)
+    attachment_files = GenericRelation('AttachmentFiles')
     aparat_video = models.TextField(null=True)
+
+    def __str__(self):
+        return self.title
 
 class CourseSessionExercise(models.Model):
     coursesession = models.ForeignKey(CourseSession, on_delete=models.CASCADE, null=True)
@@ -20,8 +33,11 @@ class CourseSessionExercise(models.Model):
     description = models.TextField(null=True)
     attachment_files = GenericRelation('AttachmentFiles')
 
+    def __str__(self):
+        return self.title
+
 class AttachmentFiles(models.Model):
-    file = models.FileField(upload_to='attach-files/%y-%m-%d_%H:%M')
+    file = models.FileField(upload_to='attach-files-%y-%m-%d_%H:%M')
     content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
     object_id = models.PositiveIntegerField()
     content_object = GenericForeignKey()

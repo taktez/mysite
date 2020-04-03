@@ -1,0 +1,25 @@
+
+<div class="col-md-4">
+    <a href="{% url 'my_app:course_detail' id=course.id %}">
+    <div class="image-product product-hover " style=" padding: 0px; border:1px solid silver;"	 >
+        <div>
+        <img src="{{ course.image.url }}" alt="{{ course.altt }}"><hr>
+        <h5 class="text-product"><b>{{ course.title }} </b></h5>
+        <h5 class="text-product"><b><a href="#">{{ course.id }} </a></b></h5>
+    </a>
+        <div class="col-xs-4 w3-block viewpoint"><a href="#" class="aviewpoint">جزئیات</a> </div>
+        <div class="col-xs-4 w3-block heart-product" style="font-family: Vazir-medium;"><i class="fa fa-heart-o"></i> 1223 </div>
+        <div class="col-xs-4 w3-block comment-product"><i class="fa fa-comment"></i> نظرات </div>
+        </div><hr>
+    </div>
+</div>
+
+
+<!--
+    {% load sorl_thumbnail %}
+    {% thumbnail item.image "100x100" crop="center" as im %}
+        <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+    {% endthumbnail %}
+
+    course.description|truncatewords:10
+-->
