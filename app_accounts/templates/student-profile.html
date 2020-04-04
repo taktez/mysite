@@ -1,0 +1,53 @@
+ {% extends 'base.html' %}
+ {% load static %}
+{% block content %}
+
+{% block css %}
+{{ block.css }}
+<style type="text/css">
+.profile-div{
+    border-left: 1px solid #d0d3d9;
+    padding: 0px; margin: 0px
+}
+.profile-ul{
+    font-size: 18px;
+    margin-right:  0px;
+    padding: 0px;
+}
+.profile-li{
+     border-bottom: 1px solid #d0d3d9;
+     color: #797a7d ;  
+    }
+.profile-li:hover{
+    border-left: 3px solid green;
+}
+.profile-p{
+    font-size: 18px;
+    line-height: 25px;
+}
+</style>
+{% endblock css %}
+<div class="container" style="margin-top: 90px">
+    <h2>حساب کاربری<h2> <hr>
+    <div class="row">
+        <div class="col-md-3 profile-div">
+             <img src="{% static 'images/place/64X64.gif' %}">
+                <h4>username</h4>
+               <ul class="nav profile-ul">
+                <li class="active profile-li"><a href="#">Home</a></li>
+                <li><a href="#" class="profile-li" >Menu 1</a></li>
+                <li><a href="#" class="profile-li" >Menu 2</a></li>
+                <li><a href="#" class="profile-li" style="border-bottom: 0px" >Menu 3</a></li>
+                <br><br>
+              </ul>
+        </div>
+        
+        <div class="col-md-9">
+            
+            <h5>سلام  <span>user name</span></h5>
+            <p class="profile-p">از پیشخوان حساب کاربری خود می توانید آخرین سفارش ها را ببینید ، به راحتی آدرس حمل و نقل و صورت حساب را مدیریت کنید و اطلاعات حساب کاربری و رمز عبور را تغییر دهید.</p>
+        </div>
+    </div>      
+</div>
+
+{% endblock content %}

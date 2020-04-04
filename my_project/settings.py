@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'social_django',
 
     'my_app',
+    'app_accounts',
 ]
 
 MIDDLEWARE = [
@@ -141,7 +142,7 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
-LOGIN_URL = 'auth/login/google-oauth2'
+LOGIN_URL = 'login'
 
 LOGIN_REDIRECT_URL = 'my_app:index'
 LOGOUT_REDIRECT_URL = 'my_app:index'

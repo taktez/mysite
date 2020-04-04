@@ -7,6 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>عنوان محصول :: دریافت شده از وب روبیک</title>
         <link type="text/css" href="{% static 'css/fa-bootstrap.css' %}" rel="stylesheet" />
+        {% block css %}
         <style>
             @font-face {
                 font-family: Parastoo;
@@ -32,6 +33,7 @@
                 url('{% static "font/Vazir-Bold-FD-WOL.ttf" %}') format('ttf');
             }
         </style>
+        {% endblock css %} 
 		<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
 		<link type="text/css" href="{% static 'css/style.css' %}" rel="stylesheet" />
 		<link href="{% static 'css/jquery-ui.css' %}" rel="stylesheet">

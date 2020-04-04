@@ -10,10 +10,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('my_app.urls')),
     path('', include('social_django.urls', namespace='social')),
+    path('profile/', include(('app_accounts.urls', 'app_accounts'), namespace='app_accounts')),
     path('login/', views.LoginView.as_view(), name='login'),
     path('logout/', views.LogoutView.as_view(), {'next_page': settings.LOGOUT_REDIRECT_URL},
-    name='logout'),
+         name='logout'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
-urlpatterns +=  static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
