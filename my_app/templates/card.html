@@ -1,5 +1,14 @@
+{% block css %}
+{{ block.css }}
 
-<div class="col-md-4">
+<style type="text/css">
+ div, h5,{
+    font-family:Parastoo ;
+    font-size: 10px;
+ }
+</style>
+{% endblock css %}
+
     <a href="{% url 'my_app:course_detail' id=course.id %}">
     <div class="image-product product-hover " style=" padding: 0px; border:1px solid silver;"	 >
         <div>
@@ -7,12 +16,16 @@
         <h5 class="text-product"><b>{{ course.title }} </b></h5>
         <h5 class="text-product"><b><a href="#"> </a></b></h5>
     </a>
-        <div class="col-xs-4 w3-block viewpoint"><a href="#" class="aviewpoint">جزئیات</a> </div>
-        <div class="col-xs-4 w3-block heart-product" style="font-family: Vazir-medium;"><i class="fa fa-heart-o"></i> 1223 </div>
-        <div class="col-xs-4 w3-block comment-product"><i class="fa fa-comment"></i> نظرات </div>
-        </div><hr>
+        <div class="col-xs-4 w3-block viewpoint" style="font-size: 18px;font-family: Parastoo"><a href="#" class="aviewpoint">جزئیات</a> </div>
+
+        <div style="font-family:Vazir; font-size: 18px "  class="col-xs-4  heart-product" > 123 </div>
+
+
+        <div style="font-family: Parastoo;font-size: 18px" class="col-xs-4 comment-product">نظرات </div>
+        </div>
+        <hr>
     </div>
-</div>
+
 
 
 <!--

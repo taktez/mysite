@@ -43,9 +43,13 @@
         </div>
         
         <div class="col-md-9">
-            
-            <h5>سلام  <span>user name</span></h5>
-            <p class="profile-p">از پیشخوان حساب کاربری خود می توانید آخرین سفارش ها را ببینید ، به راحتی آدرس حمل و نقل و صورت حساب را مدیریت کنید و اطلاعات حساب کاربری و رمز عبور را تغییر دهید.</p>
+         <h5>سلام  <span>user name</span></h5>    
+
+            {% for course in registred_course %}
+             <dir  class="col-md-6" style="float: left;">
+                    {% include "card.html" %}
+            </dir>
+            {% endfor %}
         </div>
     </div>      
 </div>
